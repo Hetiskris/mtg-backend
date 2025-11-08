@@ -8,8 +8,9 @@
         "dev": "vite",
         "format": "prettier --write resources/",
         "format:check": "prettier --check resources/",
-        "lint": "eslint . --fix",
-        "types": "tsc --noEmit"
+        "lint": "eslint . --fix && prettier --write resources/",
+        "test:lint": "eslint . && prettier --check resources/",
+        "test:types": "tsc --noEmit"
     },
     "devDependencies": {
         "@eslint/js": "^9.19.0",
@@ -52,6 +53,7 @@
         "input-otp": "^1.4.2",
         "laravel-vite-plugin": "^2.0",
         "lucide-react": "^0.475.0",
+        "playwright": "^1.56.1",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
         "tailwind-merge": "^3.0.1",
