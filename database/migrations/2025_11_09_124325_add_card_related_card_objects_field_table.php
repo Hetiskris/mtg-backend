@@ -17,11 +17,11 @@ return new class extends Migration
             $table->foreignIdFor(Card::class);
             $table->foreignIdFor(Gameplay::class);
 
-            $table->string("object");
-            $table->string("component");
-            $table->string("name");
-            $table->string("type_line");
-            $table->string("uri");
+            $table->string('object');
+            $table->string('component');
+            $table->string('name');
+            $table->string('type_line');
+            $table->string('uri');
 
             $table->timestamps();
         });

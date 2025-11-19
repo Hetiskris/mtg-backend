@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('core_card_fields', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->integer('arena_id')->nullable();
+            $table->bigInteger('arena_id')->nullable();
             $table->string('lang');
             $table->integer('mtgo_id')->nullable();
             $table->integer('mtgo_foil_id')->nullable();
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('tcgplayer_etched_id')->nullable();
             $table->integer('cardmarket_id')->nullable();
             $table->string('object');
-            $table->string('layout'); // Layout Enum
+            $table->string('layout');
             $table->uuid('oracle_id')->nullable();
             $table->string('prints_search_uri')->nullable();
             $table->string('rulings_uri');

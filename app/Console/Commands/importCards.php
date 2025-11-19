@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
-use App\Jobs\importScryfallData;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 
@@ -15,7 +14,7 @@ class importCards extends Command
      *
      * @var string
      */
-    protected $signature = 'app:import-cards';
+    protected $signature = 'cards:import-buld-scryfall-data';
 
     /**
      * The console command description.
@@ -33,7 +32,7 @@ class importCards extends Command
 
         $path = Storage::disk('local')->path('/data/test.json');
 
-        importScryfallData::dispatch($path);
+        dispatch(new \App\Jobs\importScryfallData($path));
 
         $this->info('Import job queued');
     }

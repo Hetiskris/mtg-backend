@@ -25,13 +25,13 @@ return new class extends Migration
             $table->json('keywords');
             $table->json('legalities');
             $table->string('life_modifier')->nullable();
-            $table->string("loyalty")->nullable();
+            $table->string('loyalty')->nullable();
             $table->string('name');
             $table->string('oracle_text')->nullable();
             $table->integer('penny_rank')->nullable();
             $table->string('power')->nullable();
             $table->json('produced_mana')->nullable();
-            $table->boolean("reserved");
+            $table->boolean('reserved');
             $table->string('toughness')->nullable();
             $table->string('type_line');
 

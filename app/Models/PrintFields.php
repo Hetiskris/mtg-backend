@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PrintFields extends Model
 {
+    use \Illuminate\Database\Eloquent\Factories\HasFactory;
+
     protected $table = 'card_print_fields';
 }
