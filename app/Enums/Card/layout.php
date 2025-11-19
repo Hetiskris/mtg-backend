@@ -2,7 +2,7 @@
 
 namespace App\Enums\Card;
 
-enum layout: string
+enum Layout: string
 {
     case NORMAL = 'normal';
     case SPLIT = 'split';
